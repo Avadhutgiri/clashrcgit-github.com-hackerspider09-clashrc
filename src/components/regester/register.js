@@ -236,7 +236,7 @@ const Register = () => {
 
             </div> */}
 
-        {/* <div className="flex items-center justify-center my-4">
+        <div className="flex items-center justify-center my-4">
               <span className="text-base font-medium text-gray-300">Clash</span>
 
               <div
@@ -253,7 +253,7 @@ const Register = () => {
               </div>
 
               <span className="text-base font-medium text-gray-300">RC</span>
-            </div> */}
+            </div>
 
             <div className="input-group mb-2">
               <button className="btn btn-lg w-100 rounded-2 fs-6 btn12">

@@ -13,7 +13,8 @@ const CreateTeam = () => {
   const defaultDetails = {
     username1: "",
     username2: "",
-    contestId :""
+    contestId :"",
+    isJunior:false
   };
 
   const [userDetails, setUserDetails] = useState(defaultDetails);
@@ -45,11 +46,9 @@ const CreateTeam = () => {
       setUserDetails({ ...userDetails, [name]: checked });
     }
     // e.tagrget==='isJunior'?
-    // if(e.target.type=='checkbox') {
-
-    //     setUserDetails({ ...userDetails, [name]: checked });
-
-    // }
+    if(e.target.type=='checkbox') {
+        setUserDetails({ ...userDetails, [name]: checked });
+    }
     // else{
     //     setUserDetails({ ...userDetails, [name]: value });
     // }
@@ -72,6 +71,8 @@ const CreateTeam = () => {
     // console.log(details)
     const registerEndpoint = `/player/createteam/${contestID}/`;
     const id = toast.loading("Please wait...");
+    // console.log(details)
+    // return ;
 
       axiosNoAuthInstance.post(registerEndpoint,details)
             .then((response) => {
@@ -164,6 +165,23 @@ const CreateTeam = () => {
             </div>
 
             
+            <div className="form-check"> 
+              <label>Category : </label>
+              <div class="form-check mx-5 ms-5">
+                <input class="form-check-input" type="checkbox" id="flexRadioDefault1" name="isJunior" onClick={handleChange}/>
+                <label class="form-check-label" htmlFor="flexRadioDefault1">
+                  Junior
+                </label>
+              </div>
+
+              {/* <div class="form-check">
+                <input class="form-check-input" type="radio" name="isJunior" id="flexRadioDefault2"  onClick={handleChange}/>
+                <label class="form-check-label" htmlFor="flexRadioDefault2">
+                  Senior
+                </label>
+              </div>  */}
+
+            </div>
 
 
         <div className="flex items-center justify-center my-4">
@@ -175,7 +193,6 @@ const CreateTeam = () => {
                 }`}
                 onClick={handleToggleChange} // Toggle when clicked
               >
-                {/* Circle that moves when toggled */}
                 <div
                   className={`absolute top-[2px] h-5 w-5 rounded-full bg-white border transition-transform duration-200 ${
                     isToggled ? 'translate-x-5' : 'translate-x-0'

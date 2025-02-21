@@ -76,6 +76,7 @@ const Register = () => {
     // console.log(details)
     const registerEndpoint = `/player/register/${contestID}/`;
     const id = toast.loading("Please wait...");
+    console.log(details)
 
       axiosNoAuthInstance.post(registerEndpoint,details)
             .then((response) => {
@@ -231,11 +232,11 @@ const Register = () => {
                 <label class="form-check-label" htmlFor="flexRadioDefault2">
                   Senior
                 </label>
-              </div>
+              </div> 
 
             </div> */}
 
-        <div className="flex items-center justify-center my-4">
+        {/* <div className="flex items-center justify-center my-4">
               <span className="text-base font-medium text-gray-300">Clash</span>
 
               <div
@@ -244,7 +245,6 @@ const Register = () => {
                 }`}
                 onClick={handleToggleChange} // Toggle when clicked
               >
-                {/* Circle that moves when toggled */}
                 <div
                   className={`absolute top-[2px] h-5 w-5 rounded-full bg-white border transition-transform duration-200 ${
                     isToggled ? 'translate-x-5' : 'translate-x-0'
@@ -253,7 +253,7 @@ const Register = () => {
               </div>
 
               <span className="text-base font-medium text-gray-300">RC</span>
-            </div>
+            </div> */}
 
             <div className="input-group mb-2">
               <button className="btn btn-lg w-100 rounded-2 fs-6 btn12">

@@ -21,6 +21,7 @@ import Hero from "./components/Questionhub/component/Hero"
 import Register from './components/regester/register';
 import CreateTeam from './components/createTeam/CreateTeam';
 import OpenInVSCodeButton from './components/vscode/OpenInVSCodeButton';
+// import Quescards from './components/quescard-comp/quescards'
 
 // function displayOnlyOnDesktop() {
 //   const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;

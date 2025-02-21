@@ -15,6 +15,7 @@ export default function Login() {
         username: "",
         password: "",
         isTeam:false,
+        isJunior:false,
         contestId:""
     }
     
@@ -159,6 +160,17 @@ return (
     </div>
   </div>
 
+  <div>
+        <label>
+          <input
+            type="checkbox"
+            name="isJunior"
+            checked={Logincred.isJunior}
+            onChange={handleChange}
+          />
+          isJunior
+        </label>
+      </div>
   <div>
         <label>
           <input

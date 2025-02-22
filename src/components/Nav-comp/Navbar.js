@@ -86,9 +86,8 @@ export default function Navbar() {
             // ><img src="images/pisblogo.png" alt="PISBLogo" height="30px"
           /></a> */}
       <div>
-        <a
+      <a
             className="navbar-brand navvi pisblogo"
-            // href="https://ctd.credenz.in"
           
             style={{padding: 0, marginLeft : 20}}
             ><img src="https://i.postimg.cc/50nbjgvw/revb.png" alt="PISBLogo" className='img-style'/></a>
